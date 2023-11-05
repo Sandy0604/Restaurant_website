@@ -1,0 +1,1 @@
+Flavorscape Restaurant's website showcases Home, About, Menu, Book a Table and Contact sections, seamlessly blending HTML, CSS, and JavaScript for an elegant and interactive experience.

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorScape</title>
+    <link rel="icon" href="Images/title.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body id="home">
+
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
+    <div class="cursor"></div>
+    <div class="load">
+        <div class="loader">
+            <div class="box"></div>
+        </div>
+    </div>
+ 
+        <section id="nav">
+            <nav class="my-nav">
+                <div class="my-nav-logo">
+                <h3>FlavorScape</h3>
+                </div>
+                <div class="my-nav-list">
+                    <ul>
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#menu">Menu</a>
+                        </li>
+                        <li>
+                            <a href="#reservation">Book a Table</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="my-nav-icons">
+                    <ul>
+                        <li>
+                            <a href="#home">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#menu">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#reservation">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="my-nav-button">
+                    <button id="login">Login</button>
+                </div>
+            </nav>
+        </section>
+
+        <section id="login">
+            <div class="login" id="modal">
+                <div class="modal-login">
+                    <div class="modal-header">
+                        <h3>Login</h3>
+                        <span id="tutup">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-form">
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input type="text" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Password</label>
+                                    <input type="password" placeholder="Your password">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="button">
+                            <button id="clear">Clear</button>
+                            <button>Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="header">
+            <div class="my-header">
+                <div class="header-text">
+                    <span></span>
+                    <h3>
+                        Unite, Indulge & <br> Experience the <br> Flavors! 
+                    </h3>
+                    <div class="header-text-link">
+                        <a href="#menu">Order Now</a>
+                        <a href="#reservation">Book a table</a>
+                    </div>
+                </div>
+                <div class="header-image">
+                    <img src="Images/homeimg.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    
+        <section id="about">
+            <div class="my-about">
+                <div class="about-image">
+                    <img src="Images/aboutimg.jpg" alt="">
+                </div>
+                <div class="about-text">
+                    <h3>About Us</h3>
+                    <p>
+                        Flavorscape Restaurant is an exceptional dining experiences converge.
+                        <br>
+                        <br>
+                        With a diverse menu that caters to all tastes, a warm and inviting ambiance, and a commitment to sustainability, we aim to create unforgettable moments for our guests. 
+                        <br>
+                        <br>
+                        Join us at Flavorscape, where food is not just a meal but a celebration of taste and a journey of delight.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <div class="my-food">
+            <div class="food-text">
+                <h3>FlavorScape's Best</h3>
+            </div>
+            
+            <div class="dropdown">
+                <label for="course">Select a course:</label>
+                <select id="course" onchange="showItems()">
+                    <option value="all">All</option>
+                    <option value="appetizers">Appetizers</option>
+                    <option value="main-courses">Main Courses</option>
+                    <option value="desserts">Desserts</option>
+                    <option value="beverages">Beverages</option>
+                </select>
+            </div>
+
+            <div id="menu-container" data-course="all">
+            
+            <div id="menu-container">
+
+                <div class="menu-item" data-course="appetizers">
+                    <div class="item-image">
+                        <img src="Images/samosa.jpg" alt="Samosa" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Samosa</b> ---₹40
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="appetizers">
+                    <div class="item-image">
+                        <img src="Images/paneertikka.png" alt="PaneerTikka" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Paneer-Tikka</b> ---₹120
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="appetizers">
+                    <div class="item-image">
+                        <img src="Images/alootikki.jpg" alt="AlooTikki" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Aloo-Tikki</b> ---₹100
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="appetizers">
+                    <div class="item-image">
+                        <img src="Images/pakoras.jpg" alt="Pakoras" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Pakoras</b> ---₹90
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                
+            <script src="js/script.js"></script>
+
+            </div>
+
+            <div id="menu-container">
+                
+                <div class="menu-item" data-course="main-courses">
+                    <div class="item-image">
+                        <img src="Images/northindianthali.jpg" alt="NorthIndianThali" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>North-Indian-Thali</b> ---₹349
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="main-courses">
+                    <div class="item-image">
+                        <img src="Images/paneer-naan.jpg" alt="PaneerNaan" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Butter Naan and Paneer</b> ---₹299
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="main-courses">
+                    <div class="item-image">
+                        <img src="Images/palakpaneer.jpg" alt="PalakPaneer" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Butter Naan Palak Paneer</b> ---₹299
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="main-courses">
+                    <div class="item-image">
+                        <img src="Images/chole-bhature.jpg" alt="CholeBhature" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Chole Bhature</b> ---₹199
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="main-courses">
+                    <div class="item-image">
+                        <img src="Images/Shahi-Paneer.jpg" alt="ShahiPaneer" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Roti and Shahi Paneer</b> ---₹299
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="main-courses">
+                    <div class="item-image">
+                        <img src="Images/vegbiryani.jpg" alt="VegBiriyani" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Veg Biriyani</b> ---₹249
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="main-courses">
+                    <div class="item-image">
+                        <img src="Images/friedrice.jpg" alt="friedRice" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Veg Fried Rice</b> ---₹239
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+
+                <script src="js/script.js"></script>
+
+            </div>
+
+            <div id="menu-container">
+
+                <div class="menu-item" data-course="desserts">
+                    <div class="item-image">
+                        <img src="Images/brownie.jpg" alt="Brownie" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Chocolate Brownie</b> ---₹149
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="desserts">
+                    <div class="item-image">
+                        <img src="Images/cheesecake.jpg" alt="Cheesecake" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Chocolate Cheesecake</b> ---₹149
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="desserts">
+                    <div class="item-image">
+                        <img src="Images/Gulab_Jamun.webp" alt="GulabJamun" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Gulab Jamun</b> ---₹79
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="desserts">
+                    <div class="item-image">
+                        <img src="Images/kheer.jpg" alt="Kheer" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Kheer</b> ---₹59
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="desserts">
+                    <div class="item-image">
+                        <img src="Images/rasgulla.jpg" alt="Rasgulla" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Rasgulla</b> ---₹79
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+
+                <script src="js/script.js"></script>
+
+            </div>
+
+            <div id="menu-container">
+
+                <div class="menu-item" data-course="beverages">
+                    <div class="item-image">
+                        <img src="Images/lassi.jpg" alt="Lassi" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Lassi</b> ---₹49
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="beverages">
+                    <div class="item-image">
+                        <img src="Images/masalachai.webp" alt="MasalaChai" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Masala Chai</b> ---₹69
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="beverages">
+                    <div class="item-image">
+                        <img src="Images/orangejuice.jpg" alt="OrangeJuice" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Orange Juice</b> ---₹75
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="beverages">
+                    <div class="item-image">
+                        <img src="Images/apple-juice.jpg.webp" alt="AppleJuice" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Apple Juice</b> ---₹75
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+                <div class="menu-item" data-course="beverages">
+                    <div class="item-image">
+                        <img src="Images/pomegranatejuice.avif" alt="PomogrenateJuice" onmouseover="scaleUp(this)" onmouseout="scaleDown(this)">
+                    </div>
+                    <div class="item-details">
+                        <b>Pomogrenate Juice</b> ---₹75
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+
+                <script src="js/script.js"></script>
+
+            </div>
+
+            </div>
+
+            </div>
+
+        </section>
+
+        <section id="quote">
+            <div class="my-quote">
+                <h4>"Indulge in the Art of Flavorful Dining"</h4>
+            </div>
+        </section>
+
+        <section id="reservation">
+            <div class="my-reservation">
+                <div class="reservation-text">
+                    <h3>Elevate Your Dining Experience at Flavorscape</h3>
+                    <p>Book Your Table Now!</p>
+                </div>
+
+                    <div class="reservation-card">
+                        <form action="">
+                            <div class="reservation-group">
+                                <label for="">Name</label>
+                                <input type="text">
+                            </div>
+                            <div class="reservation-group">
+                                <label for="">Phone Number</label>
+                                <input type="number">
+                            </div>
+                            <div class="reservation-group">
+                                <label for="">Number Of People</label>
+                                <input type="number">
+                            </div>
+                            <div class="reservation-group">
+                                <label for="">Date</label>
+                                <input type="date">
+                            </div>
+                            <div class="reservation-group">
+                                <label for="">Time</label>
+                                <input type="time">
+                            </div>
+                            <div class="reservation-group">
+                                <label for="">Description</label>
+                                <textarea name="" id="" cols="30" rows="3" placeholder="Description"></textarea>
+                            </div>
+                            <div class="reservation-group">
+                                <button type="submit">Reserve</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact">
+                <div class="contact-content">
+                    <div class="contact-text">
+                        <h3>Contact Us</h3>
+                        <br>
+                        <center>
+                            <p>
+                                At Flavorscape Restaurant, we're committed to providing you with an exceptional dining experience. Whether you have questions, feedback, or want to make a reservation, our team is here to assist you.
+                            </p>
+                        </center>
+                    </div>
+                    <div class="list-card">
+                        <div class="contact-card">
+                            <p>
+                                <b>Location:</b>
+                                <br>
+                                Flavorscape Restaurant
+                                <br>
+                                123 Culinary Lane
+                                <br>
+                                Chennai, TamilNadu
+                                <br>
+                                <br>
+                                <b>Contact:</b>
+                                <br> 
+                                +91 4442046270
+                            </p>
+                        </div>
+                        <div class="contact-card">
+                            <p>
+                                <b>Email:</b>
+                                <br>
+                                General Inquiries: flavorscape@restaurant.in
+                                <br>
+                                Reservations: reservations@flavorscape.in
+                                <br>
+                                <br>
+                                <b>Working Hours:</b>
+                                <br>
+                                Monday to Friday: 09:00 AM - 10:00 PM
+                                <br>
+                                Saturday and Sunday: 09:00 AM - 11:00 PM
+                            </p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CONTENT</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservation">Book a Table</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">License agreement</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Copyright information</a></li>
+                    </ul>
+                </div>
+                <div class="social-media-icons">
+                    <h3>SOCIAL MEDIA</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-envelope"></i> flavorscape@restaurant.in</a></li>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i> +91 4442046270</a></li>
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 FlavorScape. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
+</body>
+</html>
